@@ -19,33 +19,73 @@
         </script>
 
         <link rel="stylesheet" href="/assets/css/style.css?v=70900e0fcd5465887bfbb1333c47dc0b0c0976ae">
-        
+
         <!-- You can set your favicon here -->
         <!-- link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" -->
         <script>
-        function sendMessage() {
-            const request = new XMLHttpRequest();
-            request.open("POST", "https://discord.com/api/webhooks/910490672249843712/SLuIeDQhmxhGM9UFs2A1ZOKigX7j6zcfGz1vdcno__HJT15nhXlORRlH3TRODXi2Cjj-")
-            request.setRequestHeader('Content-type', 'application/json');
-            const params = {
-                username: "Jaded amogus",
-                avatar_url: "",
-                content: "Soemone clicked the amogus sus button, pls give them funny."
+            function sendMessage() {
+                const request = new XMLHttpRequest();
+                request.open("POST", "https://discord.com/api/webhooks/910490672249843712/SLuIeDQhmxhGM9UFs2A1ZOKigX7j6zcfGz1vdcno__HJT15nhXlORRlH3TRODXi2Cjj-")
+                request.setRequestHeader('Content-type', 'application/json');
+                var person = prompt("Please enter your name", "Hey there! Thanks for placing your order.");
+                const params = {
+                    "username": "Jaded Deliveries",
+                    "avatar_url": "https://i.imgur.com/4M34hi2.png",
+                    "content": "New Order",
+                    "embeds": [{
+                        "author": {
+                            "name": "Jaded",
+                        },
+                        "title": "Title",
+                        "url": "https://JadedShop.github.io",
+                        "description": "This kid made an order, you might wanna do something about it.",
+                        "color": 15258703,
+                        "fields": [
+                            {
+                            "name": "Text",
+                            "value": "More text",
+                            "inline": true
+                            },
+                            {
+                            "name": "Even more text",
+                            "value": "Yup",
+                            "inline": true
+                            },
+                            {
+                            "name": "(I don't know what the order is by the way)",
+                            "value": "ugh",
+                            "inline": false
+                            },
+                        ],
+                        "footer": {
+                            "text": "order x:",
+                        }
+                    }]
+                }
+                request.send(JSON.stringify(params));
             }
-            request.send(JSON.stringify(params));
-        }
+
+            function pageLand() {
+                const request = new XMLHttpRequest();
+                request.open("POST", "https://discord.com/api/webhooks/910498880444043274/bWg3gQEYKMKOgTkDQUewIc0znJ3wEirpdHmugewDm4sHi1qJalHXOswXlyGbkOfFUjEi")
+                request.setRequestHeader('Content-type', 'application/json');
+                const params = {
+                    username: "Jaded Statistics",
+                    avatar_url: "",
+                    content: person + " placed an order like right now or maybe 2 minutes or so ago."
+                }
+                request.send(JSON.stringify(params));
+            }
         </script>
     </head>
+    
     <body>
         <div class="container-lg px-3 my-5 markdown-body">
             <h1><a href="https://jadedshop.github.io/">JadedShop.github.io</a></h1>
-        
-            <h1 id="jadedshopgituhbio">jadedshop.gituhb.io</h1>
             <p>Jaded Shop, online ecommerce website.</p>
-            <body>
-                <button onclick="sendMessage()">Click the sus button for the funny.</button>
-            </body>
-        
+
+            <button onclick="sendMessage()">Click here to place an order. We should get back to you within a working day.</button>
+            
             <div class="footer border-top border-gray-light mt-5 pt-3 text-right text-gray">
                 <!-- empty footer lol -->
             </div>
