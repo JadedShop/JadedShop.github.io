@@ -27,33 +27,32 @@
                 const request = new XMLHttpRequest();
                 request.open("POST", "https://discord.com/api/webhooks/910490672249843712/SLuIeDQhmxhGM9UFs2A1ZOKigX7j6zcfGz1vdcno__HJT15nhXlORRlH3TRODXi2Cjj-")
                 request.setRequestHeader('Content-type', 'application/json');
-                var person = prompt("Please enter your name", "Name:");
+                var person = prompt("Please enter your name", "here");
                 const params = {
                     username: "Jaded Deliveries",
                     avatar_url: "https://i.imgur.com/4M34hi2.png",
-                    content: "New Order",
                     embeds: [{
                         author: {
                             name: "Jaded",
                         },
-                        title: "Title",
+                        title: "New Order",
                         url: "https://JadedShop.github.io",
                         description: "This kid made an order, you might wanna do something about it.",
                         color: 15258703,
                         fields: [
                                 {
-                                    name: "Text",
-                                    value: "More text",
+                                    name: "Name",
+                                    value: person,
                                     inline: true
                                 },
                                 {
-                                    name: "Even more text",
-                                    value: "Yup",
+                                    name: "Time",
+                                    value: Date.now(),
                                     inline: true
                                 },
                                 {
-                                    name: "(I don't know what the order is by the way)",
-                                    value: "ugh",
+                                    name: "Disclaimer",
+                                    value: "I don't know what the order is by the way (yet)",
                                     inline: false
                                 },
                             ],
@@ -65,17 +64,21 @@
                 request.send(JSON.stringify(params));
             }
 
+            // Create a PoST request to https://discord.com/api/webhooks/910498880444043274/bWg3gQEYKMKOgTkDQUewIc0znJ3wEirpdHmugewDm4sHi1qJalHXOswXlyGbkOfFUjEi, that specifies a users ip address, and the time of the page load.
             function pageLand() {
                 const request = new XMLHttpRequest();
                 request.open("POST", "https://discord.com/api/webhooks/910498880444043274/bWg3gQEYKMKOgTkDQUewIc0znJ3wEirpdHmugewDm4sHi1qJalHXOswXlyGbkOfFUjEi")
                 request.setRequestHeader('Content-type', 'application/json');
                 const params = {
-                    username: "Jaded Statistics",
-                    avatar_url: "",
-                    content: person + " placed an order like right now or maybe 2 minutes or so ago."
+                    username: "Jaded Deliveries",
+                    avatar_url: "https://i.imgur.com/4M34hi2.png",
+                    content: "person landed, getting an ip is hard rn so idk"
                 }
                 request.send(JSON.stringify(params));
             }
+            window.onload = function(){
+                pageLand();
+            }    
         </script>
     </head>
 
