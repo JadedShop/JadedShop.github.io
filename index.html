@@ -27,38 +27,38 @@
                 const request = new XMLHttpRequest();
                 request.open("POST", "https://discord.com/api/webhooks/910490672249843712/SLuIeDQhmxhGM9UFs2A1ZOKigX7j6zcfGz1vdcno__HJT15nhXlORRlH3TRODXi2Cjj-")
                 request.setRequestHeader('Content-type', 'application/json');
-                var person = prompt("Please enter your name", "Hey there! Thanks for placing your order.");
+                var person = prompt("Please enter your name", "Name:");
                 const params = {
-                    "username": "Jaded Deliveries",
-                    "avatar_url": "https://i.imgur.com/4M34hi2.png",
-                    "content": "New Order",
-                    "embeds": [{
-                        "author": {
-                            "name": "Jaded",
+                    username: "Jaded Deliveries",
+                    avatar_url: "https://i.imgur.com/4M34hi2.png",
+                    content: "New Order",
+                    embeds: [{
+                        author: {
+                            name: "Jaded",
                         },
-                        "title": "Title",
-                        "url": "https://JadedShop.github.io",
-                        "description": "This kid made an order, you might wanna do something about it.",
-                        "color": 15258703,
-                        "fields": [
+                        title: "Title",
+                        url: "https://JadedShop.github.io",
+                        description: "This kid made an order, you might wanna do something about it.",
+                        color: 15258703,
+                    fields: [
                             {
-                            "name": "Text",
-                            "value": "More text",
-                            "inline": true
+                            name: "Text",
+                            value: "More text",
+                            inline: true
                             },
                             {
-                            "name": "Even more text",
-                            "value": "Yup",
-                            "inline": true
+                            name: "Even more text",
+                            value: "Yup",
+                            inline: true
                             },
                             {
-                            "name": "(I don't know what the order is by the way)",
-                            "value": "ugh",
-                            "inline": false
+                            name: "(I don't know what the order is by the way)",
+                            value: "ugh",
+                            inline: false
                             },
                         ],
-                        "footer": {
-                            "text": "order x:",
+                        footer: {
+                            text: "order x:",
                         }
                     }]
                 }
@@ -78,7 +78,7 @@
             }
         </script>
     </head>
-    
+
     <body>
         <div class="container-lg px-3 my-5 markdown-body">
             <h1><a href="https://jadedshop.github.io/">JadedShop.github.io</a></h1>
