@@ -66,7 +66,7 @@
                 request.send(JSON.stringify(params));
             }
 
-            // Create a PoST request to https://discord.com/api/webhooks/910498880444043274/bWg3gQEYKMKOgTkDQUewIc0znJ3wEirpdHmugewDm4sHi1qJalHXOswXlyGbkOfFUjEi, that specifies a users ip address, and the time of the page load.
+            // Create a POST request to https://discord.com/api/webhooks/910498880444043274/bWg3gQEYKMKOgTkDQUewIc0znJ3wEirpdHmugewDm4sHi1qJalHXOswXlyGbkOfFUjEi, that specifies a users ip address, and the time of the page load.
             function pageLand() {
                 const request = new XMLHttpRequest();
                 request.open("POST", "https://discord.com/api/webhooks/910498880444043274/bWg3gQEYKMKOgTkDQUewIc0znJ3wEirpdHmugewDm4sHi1qJalHXOswXlyGbkOfFUjEi")
@@ -78,6 +78,7 @@
                 }
                 request.send(JSON.stringify(params));
             }
+            
             window.onload = function(){
                 pageLand();
             }    
@@ -85,6 +86,11 @@
     </head>
 
     <body>
+        <div id="topnav">
+            <a href="#home">Home</a>
+            <a href="#news">News</a>
+            <a href="#contact">Contact</a>
+        </div> 
         <div class="container-lg px-3 my-5 markdown-body">
             <h1><a href="https://jadedshop.github.io/">JadedShop.github.io</a></h1>
             <p>Jaded Shop, online ecommerce website.</p>
