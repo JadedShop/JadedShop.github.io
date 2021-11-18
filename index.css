@@ -14,9 +14,15 @@
     margin-top: 1rem;
 }
 
+.content {
+    padding: 16px;
+}
+
 .topnav {
-    position:sticky;
+    overflow: hidden;
+    position: fixed;
     background-color:bisque;
+    top: 0;
     width: 100%;
     height: 50px;
     display: flex;
@@ -24,4 +30,13 @@
     align-items: left;
     flex-wrap: wrap;
     margin-top: 1rem;
+}
+
+.navbutton {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px;
+    text-decoration: none;
 }
