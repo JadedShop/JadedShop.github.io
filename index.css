@@ -40,3 +40,20 @@
     padding: 14px;
     text-decoration: none;
 }
+
+.footer {
+    background-color: #afafff;
+    bottom: 0;
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+}
+
+body {
+    background-color: #ffe4e4;
+    margin: 2rem;
+}
