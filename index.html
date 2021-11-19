@@ -82,6 +82,16 @@
             window.onload = function(){
                 pageLand();
             }    
+
+            /* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */
+            function responsive() {
+                var x = document.getElementById("myTopnav");
+                if (x.className === "topnav") {
+                    x.className += " responsive";
+                } else {
+                    x.className = "topnav";
+                }
+            } 
         </script>
     </head>
 
@@ -90,9 +100,12 @@
             <a class="active" href="#">Home</a>
             <a href="#news">Products</a>
             <a href="#contact">Contact</a>
+            <a href="javascript:void(0);" class="icon" onclick="responsive()">
+                <i class="fa fa-bars"></i>
+            </a>
         </div> 
         <div class="content">
-            <h1><a href="https://jadedshop.github.io/">JadedShop.github.io</a></h1>
+            <h1><a href="https://jadedshop.github.io/">JadedShop</a></h1>
             <p>Jaded Shop, online ecommerce website.</p>
 
             <button onclick="sendMessage()">Click here to place an order. We should get back to you within a working day.</button>
