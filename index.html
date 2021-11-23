@@ -96,21 +96,43 @@
     </head>
 
     <body style="margin-top: 0px;margin-left: 0px;margin-right: 0px;margin-bottom: 0px;">
-        <div class="topnav">
-            <a class="active" href="#">Home</a>
-            <a href="#news">Products</a>
-            <a href="#contact">Contact</a>
-            <a href="javascript:void(0);" class="icon" onclick="responsive()">
-                <i class="fa fa-bars"></i>
-            </a>
-        </div> 
+        <div class="navigation">
+            <div class="logo">
+                <a href="/">
+                    <img src="https://github.com/JadedShop/JadedShop.github.io/raw/main/jadedlogo.png" alt="Jaded Logo" style="width:20%;height:20%;">
+                </a>
+            </div>
+            <div class="searchbar">
+                <form action="https://google.com/search" method="get">
+                    <input type="text" name="q" placeholder="Search...">
+                </form>
+            </div>
+            <div class="items">
+                <div class="item">
+                    <a href="/">Home</a>
+                </div>
+                <div class="item">
+                    <a href="/about">About</a>
+                </div>
+                <div class="item">
+                    <a href="/contact">Contact</a>
+                </div>
+                <div class="item">
+                    <a href="/cart">Cart</a>
+                </div>
+                <div class="item">
+                    <a href="/login">Login</a>
+                </div>
+                <div class="item">
+                    <a href="/register">Register</a>
+                </div>
+            </div>
+        </div>
         <div class="content">
             <h1><a href="https://jadedshop.github.io/">JadedShop</a></h1>
             <p>Jaded Shop, online ecommerce website.</p>
 
             <button onclick="sendMessage()">Click here to place an order. We should get back to you within a working day.</button>
-            
-            
         </div>
     </body>
 </html>
